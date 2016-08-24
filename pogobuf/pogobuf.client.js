@@ -56,6 +56,17 @@ function Client() {
         self.playerLongitude = longitude;
         self.playerAltitude = altitude || 0;
     };
+    
+     this.getPosition = function()
+    {
+        var Location =
+        {
+            lat : self.playerLatitude,
+            lng : self.playerLongitude,
+            alt : self.playerAltitude
+        }
+        return Location;
+    }
 
     /**
      * Performs the initial API call.
